@@ -1,0 +1,33 @@
+<div class="sidebar">
+  <div class="sidebar-content">
+    <div class="profile">
+      <img src="assets/pexels-photo-2379004 1.png" alt="Admin" />
+      <div class="profile-info">
+        <h4>Karthi Madesh</h4>
+        <p>Admin</p>
+      </div>
+    </div>
+
+    <nav>
+      <a routerLink="/users/list"  routerLinkActive="active">
+        <i class="bi bi-house-door-fill"></i> Home
+      </a>
+       <a routerLink="/users/add" routerLinkActive="active">
+        <i class="bi bi-person-plus-fill"></i> Add User
+      </a>
+      <a routerLink="/users/edit" routerLinkActive="active">
+        <i class="bi bi-people-fill"></i> Edit User
+      </a>
+     
+      <a routerLink="/users/profile" routerLinkActive="active">
+        <i class="bi bi-person-circle"></i> Profile
+      </a>
+    </nav>
+
+    <div class="logout">
+      <a routerLink="/auth/login">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </a>
+    </div>
+  </div>
+</div>

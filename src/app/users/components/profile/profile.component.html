@@ -1,0 +1,40 @@
+<h2 style="margin-top: 30px;">User Profile</h2>
+<hr />
+<div class="form-card">
+  <div class="form-row">
+    <div>
+      <label>First Name</label>
+      <p>{{ userdata?.firstName }}</p>
+    </div>
+    <div>
+      <label>Last Name</label>
+      <p>{{ userdata?.lastName }}</p>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <label>Email</label>
+      <p>{{ userdata?.email }}</p>
+    </div>
+    <div>
+      <label>Age</label>
+      <p>{{ userdata?.age }}</p>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div>
+      <label>Phone Number</label>
+      <p>{{ userdata?.phone }}</p>
+    </div>
+    <div>
+      <label>Birth Date</label>
+      <p>{{ userdata?.birthDate }}</p>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="cancel-btn" (click)="goBack()">Back</button>
+  </div>
+</div>

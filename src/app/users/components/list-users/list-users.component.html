@@ -1,0 +1,56 @@
+<div class="user-list-container">
+  <div class="user-list-header">
+    <h2>User List</h2>
+    <a routerLink="/users/add" class="btn add-user-btn">
+      <i class="bi bi-plus-circle-fill"></i> Add User
+    </a>
+  </div>
+
+  <div class="user-table-card">
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Birth Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList
+        ">
+          <td>
+            <img
+              [src]="user.image"
+              alt="Avatar"
+              class="user-avatar"
+            />
+          </td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.birthDate }}</td>
+          <td class="actions">
+            <button [routerLink]="['/users/edit',user.id]" class="btn edit-btn">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button [routerLink]="['/users/delete',user.id]" class="btn delete-btn">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+            <button [routerLink]="['/users/profile', user.id]" class="btn view-btn" title="View Profile">
+    <i class="bi bi-eye-fill"></i>
+     </button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

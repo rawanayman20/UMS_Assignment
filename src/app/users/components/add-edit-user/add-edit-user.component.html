@@ -1,0 +1,46 @@
+<h2>{{ userid ? 'Edit User' : 'Add User' }}</h2>
+
+<hr />
+<form [formGroup]="addForm" (ngSubmit)="onSubmitUser(addForm)" >
+  <div class="form-card">
+    <div class="form-row">
+      <div>
+        <label>First Name</label>
+        <input formControlName="firstName" type="text" placeholder="Enter your First Name" />
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input formControlName="lastName" type="text" placeholder="Enter your Last Name" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Email</label>
+        <input formControlName="email" type="email" placeholder="Enter your Email" />
+      </div>
+      <div>
+        <label>Age</label>
+        <input formControlName="age" type="number" placeholder="Enter your Age" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Phone Number</label>
+        <input formControlName="phone" type="text" placeholder="Enter your Phone Number" />
+      </div>
+      <div>
+        <label>Birth Date</label>
+        <input formControlName="birthDate" type="text" placeholder="Enter your Birth Date" />
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="addForm.invalid">
+        {{ userid ? 'Update' : 'Save' }}
+      </button>
+      <button type="button" class="cancel-btn" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,64 @@
+<section>
+  <div class="container">
+    <div class="login-box">
+      <h2>
+        <span class="highlight-bar"></span>
+        User Management System
+      </h2>
+
+      <h3 class="text-center">SIGN IN</h3>
+      <p class="sub-text text-center">Enter your credentials to access your account</p>
+
+      <form [formGroup]="loginForm" >
+        <!-- Email input -->
+        <div class="form-group mb-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            formControlName="username"
+            placeholder="Enter your email"
+          />
+          <div class="error" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+            <small *ngIf="loginForm.get('username')?.errors?.['required']">
+              Email is required
+            </small>
+            <!-- <small *ngIf="loginForm.get('username')?.errors?.['email']">
+              Please enter a valid email address
+            </small> -->
+          </div>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-group mb-4">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter your password"
+          />
+          <div class="error" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+            <small *ngIf="loginForm.get('password')?.errors?.['required']">
+              Password is required
+            </small>
+            <small *ngIf="loginForm.get('password')?.errors?.['minlength']">
+              Minimum length is {{ loginForm.get('password')?.errors?.['minlength'].requiredLength }} characters
+            </small>
+            
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button (click)="onLogin(loginForm)"
+          type="submit"
+          class="btn btn-warning w-100 fw-semibold"
+          [disabled]="loginForm.invalid">
+          SIGN IN
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+
+/* Container: centers the login box */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+section {
+ height: 100vh;
+  background: linear-gradient( #fcb045, #fdc830); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login card */
+.login-box {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+}
+
+/* Title with vertical bar */
+h2 {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight-bar {
+  height: 20px;
+  width: 4px;
+  background-color: #fdb913; /* vibrant yellow bar */
+}
+
+/* Section title */
+h3 {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1.8rem;
+}
+
+/* Form elements */
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  display: block;
+  font-weight: 500;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #fdb913;
+  outline: none;
+}
+
+/* Error message */
+.error {
+  color: #e74c3c;
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #fdb913;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ffe08f;
+  cursor: not-allowed;
+}

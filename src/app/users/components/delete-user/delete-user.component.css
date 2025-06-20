@@ -1,0 +1,61 @@
+.delete-card {
+  max-width: 500px;
+  margin: 150px auto 50px auto; /* Top, Right/Left, Bottom */
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.warning-text {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.user-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.user-details p {
+  margin: 4px 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.cancel-btn {
+  background-color: #ffd580;
+  color: #fff;
+}
